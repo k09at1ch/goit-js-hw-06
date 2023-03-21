@@ -15,14 +15,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ]
-const li = document.querySelector('.gallery') 
+const img = document.querySelector('.gallery')
 for (let i = 0; i < images.length; i++) {
-  li.insertAdjacentHTML(
+  img.insertAdjacentHTML(
     'beforeend',
     `<li><img href="${images[i].url}" alt="${images[i].alt}"></img></li>`,
   )
-  
 }
-li.style.display='flex'
-li.style.flexDirection='column'
-console.log(li)
+img.style.display = 'flex'
+img.style.flexDirection = 'column'
+

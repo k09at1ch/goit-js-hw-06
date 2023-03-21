@@ -1,8 +1,3 @@
-// const name = document.getElementsByTagName('input').value
-// console.log(name)
-// const returningName = document.getElementById('#name-output')
-// returningName.innerHTML = 'gfdcvgf'
-// console.log(returningName)
 const input = document.querySelector('#name-input')
 const output = document.querySelector('#name-output')
 

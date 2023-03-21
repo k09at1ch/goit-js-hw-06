@@ -1,6 +1,6 @@
 const input = document.querySelector('#validation-input')
-const getAttribute = Number(asd.getAttribute('data-length'))
-asd.addEventListener('input', (event) => {
+const getAttribute = Number(input.getAttribute('data-length'))
+input.addEventListener('input', (event) => {
   let text = event.target.value
 
   if (text.length !== getAttribute) {

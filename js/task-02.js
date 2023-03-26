@@ -6,10 +6,9 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ]
-const elem = document.querySelector('#ingredients')
-let elem2
-for (let i = 0; i < ingredients.length; i++) {
-  elem2 = document.createElement('li')
-  elem2.textContent = ingredients[i]
-  elem.append(elem2)
-}
+const elem = document.getElementById('ingredients')
+ingredients.forEach((ingredient)=>{
+  let item=document.createElement("li")
+  item.textContent=`${ingredient}`
+  elem.insertAdjacentHTML("afterbegin", `<li>${item.textContent}</li>`)
+})

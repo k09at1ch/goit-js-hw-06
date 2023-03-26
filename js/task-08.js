@@ -4,10 +4,10 @@ const passwordInput = loginForm.querySelector('input[name=password]')
 
 loginForm.addEventListener('submit', (event) => {
   event.preventDefault()
-  if(emailInput.length||passwordInput.length<1){
-    alert("all poles")
+  const gotInfo = { email: emailInput.value, password: passwordInput.value }
+  if(gotInfo.email==="", gotInfo.password===""){
+    alert("All poles must be filled!")
   }
-  const gotInfo={email: emailInput.value, password: passwordInput.value}
-console.log(gotInfo)
-loginForm.reset()
+  console.log(gotInfo)
+  loginForm.reset()
 })

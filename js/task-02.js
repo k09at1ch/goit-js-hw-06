@@ -6,9 +6,15 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ]
-const elem = document.getElementById('ingredients')
-ingredients.forEach((ingredient)=>{
-  let item=document.createElement("li")
-  item.textContent=`${ingredient}`
-  elem.insertAdjacentHTML("afterbegin", `<li>${item.textContent}</li>`)
-})
+
+const elem = document.querySelector('#ingredients');
+const pasting = new DocumentFragment();
+
+for (let i = 0; i < ingredients.length; i++) {
+  const li = document.createElement('li');
+  li.innerText = ingredients[i];
+  li.classList.add('item');
+  pasting.appendChild(li);
+}
+
+elem.appendChild(pasting);

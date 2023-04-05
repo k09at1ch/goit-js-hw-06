@@ -7,14 +7,15 @@ const ingredients = [
   'Condiments',
 ]
 
-const elem = document.querySelector('#ingredients');
-const pasting = new DocumentFragment();
 
-for (let i = 0; i < ingredients.length; i++) {
-  const li = document.createElement('li');
-  li.innerText = ingredients[i];
-  li.classList.add('item');
-  pasting.appendChild(li);
-}
+const ingredientList = document.querySelector("#ingredients");
 
-elem.appendChild(pasting);
+const listItems = ingredients.map(ingredient => {
+  const li = document.createElement("li");
+  li.textContent = ingredient;
+  li.classList.add("item");
+  return li;
+});
+
+ingredientList.append(...listItems);
+
